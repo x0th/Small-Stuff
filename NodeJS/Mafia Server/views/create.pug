@@ -1,0 +1,7 @@
+extends layout
+
+block content
+    p Enter Room Name:
+    form(action='/create' method='POST')
+        input(type='text' name='room_name')
+        button(type='submit') Submit

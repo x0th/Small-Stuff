@@ -1,0 +1,18 @@
+{
+  "name": "mafia_server",
+  "version": "0.0.0",
+  "description": "Mafia_Server",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "pug": "^2.0.4",
+    "socket.io": "^2.3.0",
+    "socket.io-redis": "^5.2.0"
+  }
+}

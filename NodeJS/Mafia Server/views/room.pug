@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1 #{u_name}, you are in a room '#{r_name}'
+    h2(id='user-count') Current users: #{pCount}/7
+    div(id='role-container')
+    div(id='day-night')
+    div(id='timer')
+    form(id='action-form' onsubmit='submitAction(this.submitted);')
+        div(id='action-container')
+    div(id='user-container') Users:
+    div(id='message-container') Chat:
+    form(id='send-container')
+        input(type='text' id='message-input')
+        button(type='submit' id='send-button') Send
+
+    form(action='/' method='GET' id='quit-container')
+        input(type='submit' id='quit' value='Quit')
+
+    script.
+        u_name = '#{u_name}';
+        r_name = '#{r_name}';
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/client.js')

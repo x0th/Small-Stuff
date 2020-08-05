@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1 Welcome, #{id}!
+    form(action='/' method='POST')
+        input(type='submit' name='create' value='Create New Room')
+    form(action='/room' method='POST')
+        input(type='text' name='join')
+        button(type='submit') Join Room by Name
+    ul
+        for room in rooms
+            li=room.name

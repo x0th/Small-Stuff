@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    p #{msg}
+    p Enter your name:
+    form(action='/login' method='POST')
+        input(type='text' name='id')
+        button(type='submit') Submit
